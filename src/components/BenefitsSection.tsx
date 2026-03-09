@@ -21,7 +21,7 @@ const BenefitsSection = () => {
             viewport={{ once: true }}
             transition={{ duration: 0.7 }}
           >
-            <span className="text-sm font-semibold text-primary uppercase tracking-wider">Why Campify</span>
+            <span className="text-sm font-semibold text-primary uppercase tracking-wider">Why Campzen</span>
             <h2 className="font-display text-4xl md:text-5xl font-bold mt-3 mb-6">
               Why Businesses <span className="text-gradient">Love Us</span>
             </h2>
