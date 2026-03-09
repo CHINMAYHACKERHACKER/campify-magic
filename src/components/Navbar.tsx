@@ -21,8 +21,9 @@ const Navbar = () => {
       className="fixed top-0 left-0 right-0 z-50 glass-card border-b"
     >
       <div className="max-w-7xl mx-auto px-6 py-4 flex items-center justify-between">
-        <a href="#" className="font-display text-2xl font-bold text-gradient">
-          Campzen
+        <a href="#" className="flex items-center gap-2">
+          <img src="/campzen-logo.png" alt="Campzen" className="h-10 w-10 object-contain" />
+          <span className="font-display text-2xl font-bold text-gradient">Campzen</span>
         </a>
 
         <div className="hidden md:flex items-center gap-8">
