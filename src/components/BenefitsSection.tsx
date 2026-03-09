@@ -26,7 +26,7 @@ const BenefitsSection = () => {
               Why Businesses <span className="text-gradient">Love Us</span>
             </h2>
             <p className="text-muted-foreground text-lg mb-8">
-              WhatsApp is where your customers are. With Campify, you reach them directly with messages they actually read and act on.
+              WhatsApp is where your customers are. With Campzen, you reach them directly with messages they actually read and act on.
             </p>
 
             <div className="space-y-4">
