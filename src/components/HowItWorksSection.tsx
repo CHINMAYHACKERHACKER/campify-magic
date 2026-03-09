@@ -36,7 +36,7 @@ const HowItWorksSection = () => {
         >
           <span className="text-sm font-semibold text-primary uppercase tracking-wider">Process</span>
           <h2 className="font-display text-4xl md:text-5xl font-bold mt-3 mb-4">
-            How <span className="text-gradient">Campify</span> Works
+            How <span className="text-gradient">Campzen</span> Works
           </h2>
           <p className="text-muted-foreground max-w-xl mx-auto text-lg">
             Get started in four simple steps and begin reaching your audience on WhatsApp.

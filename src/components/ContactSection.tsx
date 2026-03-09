@@ -14,7 +14,7 @@ const ContactSection = () => {
         >
           <span className="text-sm font-semibold text-primary uppercase tracking-wider">Get Started</span>
           <h2 className="font-display text-4xl md:text-5xl font-bold mt-3 mb-4">
-            Ready to <span className="text-gradient">Campify</span> Your Business?
+            Ready to <span className="text-gradient">Campzen</span> Your Business?
           </h2>
           <p className="text-muted-foreground text-lg max-w-2xl mx-auto mb-10">
             We provide a quick demo to show how the system works. Our team assists with template approvals, 

@@ -58,7 +58,7 @@ const FeaturesSection = () => {
           <span className="text-sm font-semibold text-primary uppercase tracking-wider">Features</span>
           <h2 className="font-display text-4xl md:text-5xl font-bold mt-3 mb-4">
             Everything You Need to{" "}
-            <span className="text-gradient">Campify</span> Your Outreach
+            <span className="text-gradient">Campzen</span> Your Outreach
           </h2>
           <p className="text-muted-foreground max-w-2xl mx-auto text-lg">
             A complete WhatsApp marketing suite built for businesses and educational institutes.
