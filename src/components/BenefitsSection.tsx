@@ -58,7 +58,7 @@ const BenefitsSection = () => {
               <div className="flex items-center gap-3 mb-6 pb-4 border-b border-border">
                 <div className="w-10 h-10 rounded-full bg-primary/20 flex items-center justify-center font-display font-bold text-primary">C</div>
                 <div>
-                  <div className="font-semibold text-sm">Campify</div>
+                  <div className="font-semibold text-sm">Campzen</div>
                   <div className="text-xs text-muted-foreground">WhatsApp Business</div>
                 </div>
               </div>
