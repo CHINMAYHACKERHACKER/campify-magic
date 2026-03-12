@@ -63,9 +63,9 @@ const container = {
   show: { transition: { staggerChildren: 0.08 } },
 };
 
-const item = {
+const item: import("framer-motion").Variants = {
   hidden: { opacity: 0, y: 30 },
-  show: { opacity: 1, y: 0, transition: { duration: 0.5, ease: "easeOut" } },
+  show: { opacity: 1, y: 0, transition: { duration: 0.5 } },
 };
 
 const FeaturesSection = () => {
