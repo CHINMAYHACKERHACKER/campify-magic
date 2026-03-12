@@ -17,8 +17,8 @@ const ContactSection = () => {
             Ready to <span className="text-gradient">Campzen</span> Your Business?
           </h2>
           <p className="text-muted-foreground text-lg max-w-2xl mx-auto mb-10">
-            We provide a quick demo to show how the system works. Our team assists with template approvals, 
-            campaign setup, WhatsApp API configuration, and ongoing technical support.
+            We provide a quick demo to show how the system works across WhatsApp, Google RCS, and iMessage. 
+            Our team assists with template approvals, campaign setup, API configuration, and ongoing support.
           </p>
 
           <motion.div

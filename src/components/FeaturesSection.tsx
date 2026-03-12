@@ -1,36 +1,51 @@
 import { motion } from "framer-motion";
-import { Send, Bell, FileText, Users, BarChart3, Repeat } from "lucide-react";
+import { Send, Bell, FileText, Users, BarChart3, Repeat, MessageSquare, MessageCircle, Smartphone } from "lucide-react";
 
 const features = [
   {
-    icon: Send,
+    icon: MessageSquare,
     title: "WhatsApp Campaigns",
-    description: "Send promotional offers, product updates, or course announcements to your entire audience instantly.",
+    description: "Send promotional offers, product updates, or course announcements to your entire audience via WhatsApp Business API.",
+  },
+  {
+    icon: MessageCircle,
+    title: "Google RCS Messaging",
+    description: "Reach Android users with rich, interactive messages — carousels, buttons, and branded content through Google RCS.",
+  },
+  {
+    icon: Smartphone,
+    title: "iMessage Campaigns",
+    description: "Engage Apple users with stunning iMessage campaigns featuring rich media, links, and interactive elements.",
   },
   {
     icon: Bell,
     title: "Automated Notifications",
-    description: "Schedule reminders for appointments, fee payments, order updates, and more — fully automated.",
+    description: "Schedule reminders for appointments, fee payments, order updates, and more — fully automated across all channels.",
   },
   {
     icon: FileText,
     title: "Message Templates",
-    description: "Use official WhatsApp templates with buttons and call-to-action links for maximum engagement.",
+    description: "Use official templates with buttons and call-to-action links for maximum engagement on WhatsApp, RCS, and iMessage.",
   },
   {
     icon: Users,
     title: "Bulk Messaging",
-    description: "Send messages to hundreds or thousands of contacts with a single click. Fast and reliable delivery.",
+    description: "Send messages to hundreds or thousands of contacts with a single click across multiple channels. Fast and reliable.",
   },
   {
     icon: BarChart3,
     title: "Analytics & Tracking",
-    description: "Track delivery status, read rates, and overall campaign performance with detailed dashboards.",
+    description: "Track delivery status, read rates, and overall campaign performance with detailed cross-channel dashboards.",
   },
   {
     icon: Repeat,
     title: "Campaign Management",
-    description: "Create, schedule, and manage multiple campaigns from one powerful, intuitive dashboard.",
+    description: "Create, schedule, and manage multi-channel campaigns from one powerful, intuitive dashboard.",
+  },
+  {
+    icon: Send,
+    title: "Smart Channel Routing",
+    description: "Automatically route messages to the best channel for each contact — WhatsApp, RCS, or iMessage — for maximum reach.",
   },
 ];
 
@@ -61,7 +76,7 @@ const FeaturesSection = () => {
             <span className="text-gradient">Campzen</span> Your Outreach
           </h2>
           <p className="text-muted-foreground max-w-2xl mx-auto text-lg">
-            A complete WhatsApp marketing suite built for businesses and educational institutes.
+            A complete multi-channel marketing suite — WhatsApp, Google RCS, and iMessage — built for businesses and educational institutes.
           </p>
         </motion.div>
 
