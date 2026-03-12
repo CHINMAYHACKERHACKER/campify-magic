@@ -1,5 +1,5 @@
 import { motion } from "framer-motion";
-import { CheckCircle2 } from "lucide-react";
+import { CheckCircle2, ArrowRight } from "lucide-react";
 
 const benefits = [
   "90%+ message open rate compared to SMS or email",
@@ -14,20 +14,28 @@ const benefits = [
 
 const BenefitsSection = () => {
   return (
-    <section id="benefits" className="py-24 px-6 bg-secondary/30">
-      <div className="max-w-7xl mx-auto">
+    <section id="benefits" className="py-28 px-6 relative overflow-hidden">
+      {/* Background */}
+      <div className="absolute inset-0">
+        <div className="absolute top-1/2 -translate-y-1/2 left-0 w-[500px] h-[500px] rounded-full bg-primary/[0.04] blur-[100px]" />
+      </div>
+
+      <div className="relative max-w-7xl mx-auto">
         <div className="grid grid-cols-1 lg:grid-cols-2 gap-16 items-center">
           <motion.div
             initial={{ opacity: 0, x: -40 }}
             whileInView={{ opacity: 1, x: 0 }}
             viewport={{ once: true }}
-            transition={{ duration: 0.7 }}
+            transition={{ duration: 0.7, ease: [0.22, 1, 0.36, 1] }}
           >
-            <span className="text-sm font-semibold text-primary uppercase tracking-wider">Why Campzen</span>
-            <h2 className="font-display text-4xl md:text-5xl font-bold mt-3 mb-6">
-              Why Businesses <span className="text-gradient">Love Us</span>
+            <span className="inline-flex items-center gap-2 px-4 py-1.5 rounded-full bg-primary/5 border border-primary/15 text-sm font-semibold text-primary uppercase tracking-wider mb-4">
+              Why Campzen
+            </span>
+            <h2 className="font-display text-4xl md:text-5xl font-bold mt-3 mb-6 tracking-tight">
+              Why Businesses{" "}
+              <span className="text-gradient">Love Us</span>
             </h2>
-            <p className="text-muted-foreground text-lg mb-8">
+            <p className="text-muted-foreground text-lg mb-10 leading-relaxed">
               Your customers are on WhatsApp, RCS, and iMessage. With Campzen, you reach them on every platform with messages they actually read and act on.
             </p>
 
@@ -38,11 +46,13 @@ const BenefitsSection = () => {
                   initial={{ opacity: 0, x: -20 }}
                   whileInView={{ opacity: 1, x: 0 }}
                   viewport={{ once: true }}
-                  transition={{ duration: 0.5, delay: i * 0.1 }}
-                  className="flex items-start gap-3"
+                  transition={{ duration: 0.5, delay: i * 0.08, ease: [0.22, 1, 0.36, 1] }}
+                  className="flex items-start gap-3 group"
                 >
-                  <CheckCircle2 size={22} className="text-primary mt-0.5 shrink-0" />
-                  <span className="text-foreground">{benefit}</span>
+                  <div className="w-5 h-5 rounded-full bg-primary/10 flex items-center justify-center mt-0.5 shrink-0 group-hover:bg-primary/20 transition-colors">
+                    <CheckCircle2 size={14} className="text-primary" />
+                  </div>
+                  <span className="text-foreground text-sm leading-relaxed">{benefit}</span>
                 </motion.div>
               ))}
             </div>
@@ -52,91 +62,66 @@ const BenefitsSection = () => {
             initial={{ opacity: 0, x: 40 }}
             whileInView={{ opacity: 1, x: 0 }}
             viewport={{ once: true }}
-            transition={{ duration: 0.7 }}
-            className="relative space-y-4"
+            transition={{ duration: 0.7, ease: [0.22, 1, 0.36, 1] }}
+            className="relative"
           >
-            {/* WhatsApp Mock */}
-            <div className="glass-card rounded-3xl p-6 max-w-sm mx-auto">
-              <div className="flex items-center gap-3 mb-4 pb-3 border-b border-border">
-                <div className="w-9 h-9 rounded-full bg-primary/20 flex items-center justify-center font-display font-bold text-primary text-sm">W</div>
-                <div>
-                  <div className="font-semibold text-sm">WhatsApp</div>
-                  <div className="text-xs text-muted-foreground">Business API</div>
-                </div>
-              </div>
-              <motion.div
-                initial={{ opacity: 0, y: 10 }}
-                whileInView={{ opacity: 1, y: 0 }}
-                viewport={{ once: true }}
-                transition={{ delay: 0.3 }}
-                className="bg-secondary rounded-2xl rounded-tl-sm p-4"
-              >
-                <p className="text-sm text-foreground">
-                  Hello Rahul! 👋<br /><br />
-                  Your Python class starts tomorrow at <strong>10:00 AM</strong>.<br />
-                  Join using the link below.
-                </p>
-                <div className="mt-3 text-center">
-                  <span className="text-xs text-primary font-medium">📎 Join Class</span>
-                </div>
-              </motion.div>
-              <div className="text-right mt-1">
-                <span className="text-[10px] text-muted-foreground">Delivered ✓✓</span>
+            {/* Decorative stats card */}
+            <div className="glass-card-elevated rounded-3xl p-8 relative overflow-hidden">
+              <div className="absolute top-0 right-0 w-40 h-40 bg-primary/5 rounded-full blur-[60px]" />
+              
+              <div className="relative">
+                <h3 className="font-display text-2xl font-bold mb-8">Campaign Performance</h3>
+                
+                {/* Animated stat bars */}
+                {[
+                  { label: "WhatsApp Open Rate", value: 94, color: "bg-primary" },
+                  { label: "RCS Engagement", value: 87, color: "bg-[hsl(210_60%_50%)]" },
+                  { label: "iMessage Read Rate", value: 91, color: "bg-[hsl(220_20%_40%)]" },
+                  { label: "Email (comparison)", value: 21, color: "bg-muted-foreground/30" },
+                ].map((stat, i) => (
+                  <motion.div
+                    key={stat.label}
+                    initial={{ opacity: 0, x: -20 }}
+                    whileInView={{ opacity: 1, x: 0 }}
+                    viewport={{ once: true }}
+                    transition={{ delay: 0.3 + i * 0.1 }}
+                    className="mb-5 last:mb-0"
+                  >
+                    <div className="flex justify-between items-center mb-2">
+                      <span className="text-sm font-medium text-foreground">{stat.label}</span>
+                      <span className="text-sm font-bold text-foreground">{stat.value}%</span>
+                    </div>
+                    <div className="h-2 rounded-full bg-muted overflow-hidden">
+                      <motion.div
+                        initial={{ width: 0 }}
+                        whileInView={{ width: `${stat.value}%` }}
+                        viewport={{ once: true }}
+                        transition={{ duration: 1.2, delay: 0.5 + i * 0.15, ease: [0.22, 1, 0.36, 1] }}
+                        className={`h-full rounded-full ${stat.color}`}
+                      />
+                    </div>
+                  </motion.div>
+                ))}
+
+                <motion.div
+                  initial={{ opacity: 0, y: 10 }}
+                  whileInView={{ opacity: 1, y: 0 }}
+                  viewport={{ once: true }}
+                  transition={{ delay: 1 }}
+                  className="mt-8 p-4 rounded-xl bg-primary/5 border border-primary/10"
+                >
+                  <div className="flex items-center gap-3">
+                    <div className="w-10 h-10 rounded-full bg-primary/15 flex items-center justify-center">
+                      <ArrowRight size={18} className="text-primary" />
+                    </div>
+                    <div>
+                      <div className="text-sm font-semibold text-foreground">4.5x higher than email</div>
+                      <div className="text-xs text-muted-foreground">Average across all messaging channels</div>
+                    </div>
+                  </div>
+                </motion.div>
               </div>
             </div>
-
-            {/* RCS Mock */}
-            <motion.div
-              initial={{ opacity: 0, y: 20 }}
-              whileInView={{ opacity: 1, y: 0 }}
-              viewport={{ once: true }}
-              transition={{ delay: 0.5 }}
-              className="glass-card rounded-3xl p-6 max-w-sm mx-auto"
-            >
-              <div className="flex items-center gap-3 mb-4 pb-3 border-b border-border">
-                <div className="w-9 h-9 rounded-full bg-[hsl(210_60%_50%/0.15)] flex items-center justify-center font-display font-bold text-[hsl(210_60%_45%)] text-sm">R</div>
-                <div>
-                  <div className="font-semibold text-sm">Google RCS</div>
-                  <div className="text-xs text-muted-foreground">Rich Messaging</div>
-                </div>
-              </div>
-              <div className="bg-secondary rounded-2xl rounded-tl-sm p-4">
-                <p className="text-sm text-foreground">
-                  🎉 Flash Sale!<br /><br />
-                  Get <strong>30% off</strong> all courses this weekend.
-                </p>
-                <div className="mt-3 flex gap-2">
-                  <span className="text-xs bg-primary/10 text-primary px-3 py-1.5 rounded-full font-medium">🛒 Shop Now</span>
-                  <span className="text-xs bg-primary/10 text-primary px-3 py-1.5 rounded-full font-medium">📋 View Details</span>
-                </div>
-              </div>
-            </motion.div>
-
-            {/* iMessage Mock */}
-            <motion.div
-              initial={{ opacity: 0, y: 20 }}
-              whileInView={{ opacity: 1, y: 0 }}
-              viewport={{ once: true }}
-              transition={{ delay: 0.7 }}
-              className="glass-card rounded-3xl p-6 max-w-sm mx-auto"
-            >
-              <div className="flex items-center gap-3 mb-4 pb-3 border-b border-border">
-                <div className="w-9 h-9 rounded-full bg-[hsl(220_15%_50%/0.15)] flex items-center justify-center font-display font-bold text-[hsl(220_20%_40%)] text-sm">i</div>
-                <div>
-                  <div className="font-semibold text-sm">iMessage</div>
-                  <div className="text-xs text-muted-foreground">Apple Business Chat</div>
-                </div>
-              </div>
-              <div className="bg-secondary rounded-2xl rounded-tl-sm p-4">
-                <p className="text-sm text-foreground">
-                  Hi Sarah! 🍎<br /><br />
-                  Your order #4521 has been shipped! Track it here.
-                </p>
-                <div className="mt-3 text-center">
-                  <span className="text-xs text-primary font-medium">📦 Track Order</span>
-                </div>
-              </div>
-            </motion.div>
           </motion.div>
         </div>
       </div>
