@@ -40,6 +40,9 @@
     --glow-primary: 0 8px 32px -8px hsl(152 60% 42% / 0.4);
     --glow-accent: 0 8px 32px -8px hsl(262 60% 55% / 0.3);
 
+    --rcs-hue: 210 60% 50%;
+    --imessage-hue: 220 20% 40%;
+
     --sidebar-background: 0 0% 98%;
     --sidebar-foreground: 240 5.3% 26.1%;
     --sidebar-primary: 240 5.9% 10%;
@@ -70,6 +73,8 @@
     --border: 220 20% 18%;
     --input: 220 20% 18%;
     --ring: 152 60% 45%;
+    --rcs-hue: 210 60% 55%;
+    --imessage-hue: 220 20% 50%;
     --sidebar-background: 240 5.9% 10%;
     --sidebar-foreground: 240 4.8% 95.9%;
     --sidebar-primary: 224.3 76.3% 48%;
@@ -105,4 +110,55 @@
   .glass-card {
     @apply bg-card/80 backdrop-blur-xl border border-border/50 shadow-lg;
   }
+
+  .glass-card-elevated {
+    @apply bg-card/90 backdrop-blur-2xl border border-border/40 shadow-2xl;
+  }
+
+  .glow-primary {
+    box-shadow: 0 0 60px -12px hsl(152 60% 42% / 0.3), 0 0 120px -24px hsl(152 60% 42% / 0.15);
+  }
+
+  .glow-rcs {
+    box-shadow: 0 0 60px -12px hsl(210 60% 50% / 0.25), 0 0 120px -24px hsl(210 60% 50% / 0.12);
+  }
+
+  .glow-imessage {
+    box-shadow: 0 0 60px -12px hsl(220 20% 40% / 0.2), 0 0 120px -24px hsl(220 20% 40% / 0.1);
+  }
+
+  .shimmer {
+    background: linear-gradient(
+      110deg,
+      transparent 33%,
+      hsl(152 60% 42% / 0.08) 50%,
+      transparent 67%
+    );
+    background-size: 300% 100%;
+    animation: shimmer 3s infinite linear;
+  }
+
+  .float-slow {
+    animation: float 6s ease-in-out infinite;
+  }
+
+  .float-slower {
+    animation: float 8s ease-in-out infinite reverse;
+  }
+}
+
+@keyframes shimmer {
+  0% { background-position: 200% 0; }
+  100% { background-position: -200% 0; }
+}
+
+@keyframes float {
+  0%, 100% { transform: translateY(0px); }
+  50% { transform: translateY(-12px); }
+}
+
+@keyframes pulse-ring {
+  0% { transform: scale(0.95); opacity: 0.7; }
+  50% { transform: scale(1.05); opacity: 0.3; }
+  100% { transform: scale(0.95); opacity: 0.7; }
 }
