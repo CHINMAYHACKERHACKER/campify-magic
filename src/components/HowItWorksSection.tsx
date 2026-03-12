@@ -4,22 +4,22 @@ const steps = [
   {
     step: "01",
     title: "Setup & Configure",
-    description: "We set up your WhatsApp Business API, configure templates, and get everything ready for launch.",
+    description: "We set up your WhatsApp Business API, Google RCS, and iMessage Business accounts — all configured and ready to go.",
   },
   {
     step: "02",
     title: "Create Templates",
-    description: "Design professional message templates with buttons, links, and call-to-actions for your campaigns.",
+    description: "Design professional message templates with rich media, buttons, and CTAs for each channel.",
   },
   {
     step: "03",
     title: "Launch Campaigns",
-    description: "Import contacts, schedule your campaigns, and start sending messages to thousands instantly.",
+    description: "Import contacts, select channels, schedule campaigns, and start sending messages to thousands instantly.",
   },
   {
     step: "04",
     title: "Track & Optimize",
-    description: "Monitor delivery rates, read receipts, and campaign performance to optimize your outreach.",
+    description: "Monitor delivery rates, read receipts, and cross-channel performance to optimize your outreach.",
   },
 ];
 
@@ -39,7 +39,7 @@ const HowItWorksSection = () => {
             How <span className="text-gradient">Campzen</span> Works
           </h2>
           <p className="text-muted-foreground max-w-xl mx-auto text-lg">
-            Get started in four simple steps and begin reaching your audience on WhatsApp.
+            Get started in four simple steps and begin reaching your audience on WhatsApp, Google RCS, and iMessage.
           </p>
         </motion.div>
 

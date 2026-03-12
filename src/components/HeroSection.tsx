@@ -1,6 +1,6 @@
 import { motion } from "framer-motion";
 import { Button } from "@/components/ui/button";
-import { MessageSquare, Zap, Send } from "lucide-react";
+import { MessageSquare, Zap, Send, Smartphone, MessageCircle } from "lucide-react";
 
 const HeroSection = () => {
   return (
@@ -17,6 +17,11 @@ const HeroSection = () => {
           transition={{ duration: 10, repeat: Infinity }}
           className="absolute -bottom-40 -left-40 w-96 h-96 rounded-full bg-accent/10 blur-3xl"
         />
+        <motion.div
+          animate={{ scale: [1, 1.3, 1], opacity: [0.06, 0.12, 0.06] }}
+          transition={{ duration: 12, repeat: Infinity }}
+          className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-[500px] h-[500px] rounded-full bg-[hsl(210_60%_50%/0.08)] blur-3xl"
+        />
       </div>
 
       <div className="relative max-w-7xl mx-auto px-6 text-center">
@@ -24,10 +29,20 @@ const HeroSection = () => {
           initial={{ opacity: 0, y: 30 }}
           animate={{ opacity: 1, y: 0 }}
           transition={{ duration: 0.8 }}
-          className="inline-flex items-center gap-2 px-4 py-2 rounded-full bg-secondary text-secondary-foreground text-sm font-medium mb-8"
+          className="flex flex-wrap items-center justify-center gap-3 mb-8"
         >
-          <Zap size={16} />
-          WhatsApp Business API Powered
+          <span className="inline-flex items-center gap-2 px-4 py-2 rounded-full bg-secondary text-secondary-foreground text-sm font-medium">
+            <MessageSquare size={16} />
+            WhatsApp
+          </span>
+          <span className="inline-flex items-center gap-2 px-4 py-2 rounded-full bg-[hsl(210_60%_95%)] text-[hsl(210_60%_35%)] text-sm font-medium">
+            <MessageCircle size={16} />
+            Google RCS
+          </span>
+          <span className="inline-flex items-center gap-2 px-4 py-2 rounded-full bg-[hsl(210_15%_95%)] text-[hsl(220_25%_35%)] text-sm font-medium">
+            <Smartphone size={16} />
+            iMessage
+          </span>
         </motion.div>
 
         <motion.h1
@@ -37,7 +52,7 @@ const HeroSection = () => {
           className="font-display text-5xl md:text-7xl font-bold leading-tight mb-6"
         >
           Run Powerful{" "}
-          <span className="text-gradient">WhatsApp Campaigns</span>
+          <span className="text-gradient">Multi-Channel Campaigns</span>
           <br />
           That Convert
         </motion.h1>
@@ -48,8 +63,8 @@ const HeroSection = () => {
           transition={{ duration: 0.8, delay: 0.2 }}
           className="text-lg md:text-xl text-muted-foreground max-w-2xl mx-auto mb-10"
         >
-          Create templates, send bulk campaigns, and automate notifications
-          through WhatsApp with 90%+ open rates. The smartest way to reach your audience.
+          Create templates and send bulk campaigns across WhatsApp, Google RCS, and iMessage 
+          with 90%+ open rates. The smartest way to reach your audience on every platform.
         </motion.p>
 
         <motion.div
@@ -77,11 +92,12 @@ const HeroSection = () => {
           initial={{ opacity: 0, y: 40 }}
           animate={{ opacity: 1, y: 0 }}
           transition={{ duration: 0.8, delay: 0.5 }}
-          className="mt-20 grid grid-cols-1 sm:grid-cols-3 gap-8 max-w-3xl mx-auto"
+          className="mt-20 grid grid-cols-2 sm:grid-cols-4 gap-8 max-w-4xl mx-auto"
         >
           {[
             { value: "90%+", label: "Open Rate" },
             { value: "10x", label: "More Engagement" },
+            { value: "3", label: "Channels Supported" },
             { value: "1000s", label: "Messages Instantly" },
           ].map((stat) => (
             <div key={stat.label} className="text-center">
