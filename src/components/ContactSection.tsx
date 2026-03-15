@@ -49,10 +49,10 @@ const ContactSection = () => {
                 Reach out for a free demo and consultation
               </p>
               <a
-                href="mailto:convopilot@gmail.com"
+                href="mailto:campzen@yahoo.com"
                 className="inline-flex items-center gap-2 text-lg font-semibold text-primary hover:underline underline-offset-4 transition-all"
               >
-                convopilot@gmail.com
+                campzen@yahoo.com
               </a>
               <div className="mt-8">
                 <Button variant="hero" size="lg" className="text-base px-8 group" asChild>
