@@ -49,19 +49,14 @@ const ContactSection = () => {
                 Reach out for a free demo and consultation
               </p>
               <a
-                  <a href="mailto:zen.camp@yahoo.com">
+                href="mailto:zen.camp@yahoo.com"
                 className="inline-flex items-center gap-2 text-lg font-semibold text-primary hover:underline underline-offset-4 transition-all"
               >
-                <a
-                  href="mailto:zen.camp@yahoo.com"
-                  className="inline-flex items-center gap-2 text-lg font-semibold text-primary hover:underline underline-offset-4 transition-all"
-                >
-                  zen.camp@yahoo.com
-                </a>
+                zen.camp@yahoo.com
               </a>
               <div className="mt-8">
                 <Button variant="hero" size="lg" className="text-base px-8 group" asChild>
-                  <a href="mailto:campzen@yahoo.com">
+                  <a href="mailto:zen.camp@yahoo.com">
                     <MessageSquare size={18} />
                     Schedule a Demo
                     <ArrowRight size={16} className="transition-transform group-hover:translate-x-1" />
