@@ -12,17 +12,21 @@ const Footer = () => {
           <p className="text-sm text-muted-foreground">
             © {new Date().getFullYear()} Campzen. All rights reserved.
           </p>
-          <a
-            href="mailto:campzen@yahoo.com"
-            className="text-sm text-muted-foreground hover:text-primary transition-colors"
-          >
-          <a
-            href="mailto:zen.camp@yahoo.com"
-            className="text-sm text-muted-foreground hover:text-primary transition-colors"
-          >
-            zen.camp@yahoo.com
-          </a>
-          </a>
+          <div className="flex flex-col sm:flex-row items-center gap-3">
+            <a
+              href="mailto:zen.camp@yahoo.com"
+              className="text-sm text-muted-foreground hover:text-primary transition-colors"
+            >
+              zen.camp@yahoo.com
+            </a>
+            <span className="hidden sm:inline text-muted-foreground/40">|</span>
+            <a
+              href="mailto:kanashettichinmay@gmail.com"
+              className="text-sm text-muted-foreground hover:text-primary transition-colors"
+            >
+              kanashettichinmay@gmail.com
+            </a>
+          </div>
         </div>
       </div>
     </footer>
