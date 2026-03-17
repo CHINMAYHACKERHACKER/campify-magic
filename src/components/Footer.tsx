@@ -16,7 +16,12 @@ const Footer = () => {
             href="mailto:campzen@yahoo.com"
             className="text-sm text-muted-foreground hover:text-primary transition-colors"
           >
-            campzen@yahoo.com
+          <a
+            href="mailto:zen.camp@yahoo.com"
+            className="text-sm text-muted-foreground hover:text-primary transition-colors"
+          >
+            zen.camp@yahoo.com
+          </a>
           </a>
         </div>
       </div>

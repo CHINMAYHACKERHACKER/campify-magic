@@ -49,7 +49,7 @@ const ContactSection = () => {
                 Reach out for a free demo and consultation
               </p>
               <a
-                href="mailto:campzen@yahoo.com"
+                  <a href="mailto:zen.camp@yahoo.com">
                 className="inline-flex items-center gap-2 text-lg font-semibold text-primary hover:underline underline-offset-4 transition-all"
               >
                 <a
