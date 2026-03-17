@@ -48,16 +48,16 @@ const ContactSection = () => {
               <p className="text-muted-foreground mb-6 text-sm">
                 Reach out for a free demo and consultation
               </p>
-              <div className="flex flex-col gap-3">
+              <div className="flex flex-col items-center gap-3">
                 <a
                   href="mailto:zen.camp@yahoo.com"
-                  className="inline-flex items-center gap-2 text-lg font-semibold text-primary hover:underline underline-offset-4 transition-all"
+                  className="inline-flex items-center justify-center gap-2 text-lg font-semibold text-primary hover:underline underline-offset-4 transition-all"
                 >
                   zen.camp@yahoo.com
                 </a>
                 <a
                   href="mailto:kanashettichinmay@gmail.com"
-                  className="inline-flex items-center gap-2 text-lg font-semibold text-primary hover:underline underline-offset-4 transition-all"
+                  className="inline-flex items-center justify-center gap-2 text-lg font-semibold text-primary hover:underline underline-offset-4 transition-all"
                 >
                   kanashettichinmay@gmail.com
                 </a>
