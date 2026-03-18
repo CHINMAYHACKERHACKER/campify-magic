@@ -50,16 +50,10 @@ const ContactSection = () => {
               </p>
               <div className="flex flex-col gap-3">
                 <a
-                  href="mailto:zen.camp@yahoo.com"
+                  href="mailto:query12356789@gmail.com"
                   className="inline-flex items-center justify-center gap-2 text-lg font-semibold text-primary hover:underline underline-offset-4 transition-all"
                 >
-                  zen.camp@yahoo.com
-                </a>
-                <a
-                  href="mailto:kanashettichinmay@gmail.com"
-                  className="inline-flex items-center justify-center gap-2 text-lg font-semibold text-primary hover:underline underline-offset-4 transition-all"
-                >
-                  kanashettichinmay@gmail.com
+                  query12356789@gmail.com
                 </a>
               </div>
               <div className="mt-8">
