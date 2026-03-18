@@ -58,7 +58,7 @@ const ContactSection = () => {
               </div>
               <div className="mt-8">
                 <Button variant="hero" size="lg" className="text-base px-8 group" asChild>
-                  <a href="mailto:zen.camp@yahoo.com">
+                  <a href="mailto:query12356789@gmail.com">
                     <MessageSquare size={18} />
                     Schedule a Demo
                     <ArrowRight size={16} className="transition-transform group-hover:translate-x-1" />
