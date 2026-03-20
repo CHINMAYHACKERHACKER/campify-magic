@@ -6,55 +6,55 @@ const features = [
     icon: MessageSquare,
     title: "WhatsApp Campaigns",
     description: "Send promotional offers, product updates, or course announcements to your entire audience via WhatsApp Business API.",
-    accent: "primary",
+    comingSoon: false,
   },
   {
     icon: MessageCircle,
     title: "Google RCS Messaging",
     description: "Reach Android users with rich, interactive messages — carousels, buttons, and branded content through Google RCS.",
-    accent: "primary",
+    comingSoon: true,
   },
   {
     icon: Smartphone,
     title: "iMessage Campaigns",
     description: "Engage Apple users with stunning iMessage campaigns featuring rich media, links, and interactive elements.",
-    accent: "primary",
+    comingSoon: true,
   },
   {
     icon: Bell,
     title: "Automated Notifications",
     description: "Schedule reminders for appointments, fee payments, order updates — fully automated across all channels.",
-    accent: "primary",
+    comingSoon: false,
   },
   {
     icon: FileText,
     title: "Message Templates",
     description: "Use official templates with buttons and CTAs for maximum engagement on WhatsApp, RCS, and iMessage.",
-    accent: "primary",
+    comingSoon: false,
   },
   {
     icon: Users,
     title: "Bulk Messaging",
     description: "Send messages to hundreds or thousands of contacts with a single click across multiple channels.",
-    accent: "primary",
+    comingSoon: false,
   },
   {
     icon: BarChart3,
     title: "Analytics & Tracking",
     description: "Track delivery status, read rates, and campaign performance with detailed cross-channel dashboards.",
-    accent: "primary",
+    comingSoon: false,
   },
   {
     icon: Repeat,
     title: "Campaign Management",
     description: "Create, schedule, and manage multi-channel campaigns from one powerful, intuitive dashboard.",
-    accent: "primary",
+    comingSoon: false,
   },
   {
     icon: Send,
     title: "Smart Channel Routing",
     description: "Auto-route messages to the best channel for each contact — WhatsApp, RCS, or iMessage — for maximum reach.",
-    accent: "primary",
+    comingSoon: false,
   },
 ];
 
@@ -118,7 +118,14 @@ const FeaturesSection = () => {
                 <div className="w-12 h-12 rounded-xl bg-primary/8 border border-primary/10 flex items-center justify-center mb-5 group-hover:bg-primary/15 group-hover:border-primary/20 transition-all duration-500">
                   <feature.icon size={22} className="text-primary" />
                 </div>
-                <h3 className="font-display text-lg font-semibold mb-2.5 group-hover:text-primary transition-colors duration-300">{feature.title}</h3>
+                <div className="flex items-center gap-2 mb-2.5">
+                  <h3 className="font-display text-lg font-semibold group-hover:text-primary transition-colors duration-300">{feature.title}</h3>
+                  {feature.comingSoon && (
+                    <span className="text-[9px] font-bold uppercase tracking-wider px-2 py-0.5 rounded-full bg-accent/10 text-accent border border-accent/20 whitespace-nowrap">
+                      Coming Soon
+                    </span>
+                  )}
+                </div>
                 <p className="text-muted-foreground text-sm leading-relaxed">{feature.description}</p>
               </div>
             </motion.div>
