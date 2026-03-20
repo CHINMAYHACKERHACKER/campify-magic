@@ -91,10 +91,10 @@ const templates: Record<Channel, { messages: { text: string; time: string; ctas?
   },
 };
 
-const tabs: { id: Channel; label: string }[] = [
-  { id: "whatsapp", label: "WhatsApp" },
-  { id: "rcs", label: "Google RCS" },
-  { id: "imessage", label: "iMessage" },
+const tabs: { id: Channel; label: string; comingSoon: boolean }[] = [
+  { id: "whatsapp", label: "WhatsApp", comingSoon: false },
+  { id: "rcs", label: "Google RCS", comingSoon: true },
+  { id: "imessage", label: "iMessage", comingSoon: true },
 ];
 
 const TypingIndicator = () => (
