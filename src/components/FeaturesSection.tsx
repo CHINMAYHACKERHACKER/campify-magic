@@ -118,7 +118,14 @@ const FeaturesSection = () => {
                 <div className="w-12 h-12 rounded-xl bg-primary/8 border border-primary/10 flex items-center justify-center mb-5 group-hover:bg-primary/15 group-hover:border-primary/20 transition-all duration-500">
                   <feature.icon size={22} className="text-primary" />
                 </div>
-                <h3 className="font-display text-lg font-semibold mb-2.5 group-hover:text-primary transition-colors duration-300">{feature.title}</h3>
+                <div className="flex items-center gap-2 mb-2.5">
+                  <h3 className="font-display text-lg font-semibold group-hover:text-primary transition-colors duration-300">{feature.title}</h3>
+                  {feature.comingSoon && (
+                    <span className="text-[9px] font-bold uppercase tracking-wider px-2 py-0.5 rounded-full bg-accent/10 text-accent border border-accent/20 whitespace-nowrap">
+                      Coming Soon
+                    </span>
+                  )}
+                </div>
                 <p className="text-muted-foreground text-sm leading-relaxed">{feature.description}</p>
               </div>
             </motion.div>

@@ -341,6 +341,11 @@ const TemplateMockupSection = () => {
                 >
                   <Icon size={16} className={isActive ? config.color : ""} />
                   {tab.label}
+                  {tab.comingSoon && (
+                    <span className="text-[8px] font-bold uppercase tracking-wider px-1.5 py-0.5 rounded-full bg-accent/10 text-accent border border-accent/20">
+                      Soon
+                    </span>
+                  )}
                   {isActive && (
                     <motion.div
                       layoutId="activeTab"

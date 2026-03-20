@@ -94,9 +94,9 @@ const HeroSection = () => {
           className="flex flex-wrap items-center justify-center gap-3 mb-10"
         >
           {[
-            { label: "WhatsApp", color: "bg-primary/10 text-primary border-primary/20" },
-            { label: "Google RCS", color: "bg-[hsl(210_60%_50%/0.1)] text-[hsl(210_60%_40%)] border-[hsl(210_60%_50%/0.2)]" },
-            { label: "iMessage", color: "bg-[hsl(220_20%_40%/0.08)] text-[hsl(220_20%_35%)] border-[hsl(220_20%_40%/0.15)]" },
+            { label: "WhatsApp", color: "bg-primary/10 text-primary border-primary/20", soon: false },
+            { label: "Google RCS", color: "bg-[hsl(210_60%_50%/0.1)] text-[hsl(210_60%_40%)] border-[hsl(210_60%_50%/0.2)]", soon: true },
+            { label: "iMessage", color: "bg-[hsl(220_20%_40%/0.08)] text-[hsl(220_20%_35%)] border-[hsl(220_20%_40%/0.15)]", soon: true },
           ].map((ch, i) => (
             <motion.span
               key={ch.label}
@@ -107,6 +107,11 @@ const HeroSection = () => {
             >
               <div className="w-2 h-2 rounded-full bg-current opacity-60" />
               {ch.label}
+              {ch.soon && (
+                <span className="ml-1 text-[9px] font-bold uppercase tracking-wider px-1.5 py-0.5 rounded-full bg-accent/15 text-accent border border-accent/20">
+                  Soon
+                </span>
+              )}
             </motion.span>
           ))}
         </motion.div>
