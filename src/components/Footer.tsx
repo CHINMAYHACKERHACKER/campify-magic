@@ -13,10 +13,10 @@ const Footer = () => {
             © {new Date().getFullYear()} Campzen. All rights reserved.
           </p>
           <a
-            href="mailto:query12356789@gmail.com"
+            href="mailto:camp.zen.support@gmail.com"
             className="text-sm text-muted-foreground hover:text-primary transition-colors"
           >
-            query12356789@gmail.com
+            camp.zen.support@gmail.com
           </a>
         </div>
       </div>
